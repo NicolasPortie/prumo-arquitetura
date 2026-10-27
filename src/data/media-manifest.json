@@ -1,0 +1,212 @@
+{
+  "prumo-alto-chegada-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#282818",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-alto-interior-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#080808",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-alto-varanda-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#181808",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-encosta-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#181808",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-interior-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#887858",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-jardim-europa-chegada-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#080808",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-jardim-europa-detalhe-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#080808",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-jardim-europa-interior-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#583818",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-mantiqueira-chegada-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#181808",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-mantiqueira-interior-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#381808",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-mantiqueira-suite-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#382818",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-patio-conceito-v1": {
+    "width": 1536,
+    "height": 1024,
+    "color": "#b8c8d8",
+    "widths": [
+      640,
+      1100,
+      1536
+    ]
+  },
+  "prumo-reforma-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#080808",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-trancoso-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#582808",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-trancoso-interior-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#482808",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-trancoso-piscina-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#b8c8d8",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-trancoso-suite-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#381808",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-urbana-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#181808",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-vila-madalena-escritorio-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#282818",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-vila-madalena-estar-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#080808",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  },
+  "prumo-vila-madalena-interior-conceito-v1": {
+    "width": 1672,
+    "height": 941,
+    "color": "#080808",
+    "widths": [
+      640,
+      1100,
+      1600
+    ]
+  }
+}
