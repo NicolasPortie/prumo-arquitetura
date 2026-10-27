@@ -1,0 +1,233 @@
+/* Projetos: galeria que corre para o lado enquanto a página fica parada */
+
+.projects-section {
+  color: var(--ink);
+  background: var(--bone);
+}
+
+.projects-pin {
+  padding-top: var(--section-y);
+}
+
+.projects-head {
+  align-items: end;
+  padding-bottom: clamp(1.6rem, 4vw, 3rem);
+}
+
+.projects-title {
+  grid-column: 1 / span 9;
+  font-size: var(--fs-h2);
+  letter-spacing: -0.05em;
+  line-height: 0.92;
+  --accent: var(--moss);
+}
+
+.projects-count {
+  grid-column: 10 / -1;
+  justify-self: end;
+  color: var(--ink-muted);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  font-variant-numeric: tabular-nums;
+}
+
+.projects-count span {
+  color: var(--ink);
+}
+
+.projects-list {
+  display: grid;
+  gap: clamp(2.4rem, 6vw, 4rem);
+  padding-inline: var(--page-x);
+}
+
+.project-card {
+  position: relative;
+  cursor: pointer;
+}
+
+/* O clique é tratado no cartão inteiro; o botão do título é o caminho do teclado */
+.project-card-trigger {
+  display: block;
+  color: inherit;
+  text-align: left;
+}
+
+.project-card-trigger:focus-visible {
+  outline: 0;
+}
+
+.project-card:has(.project-card-trigger:focus-visible) .project-card-media {
+  outline: 2px solid var(--clay);
+  outline-offset: 4px;
+}
+
+.project-card-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--bone-deep);
+}
+
+.project-card-media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--picture-color, var(--bone-deep));
+}
+
+.project-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card-action {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  display: inline-flex;
+  gap: 0.6rem;
+  align-items: center;
+  min-height: 2.5rem;
+  padding-inline: 1.1rem;
+  color: var(--ink);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--bone);
+  border-radius: 999px;
+}
+
+.project-card-action i {
+  font-style: normal;
+}
+
+.project-card-copy {
+  display: flex;
+  gap: 0.4rem 1.5rem;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-top: 1.1rem;
+}
+
+.project-card h3 {
+  font-size: var(--fs-h3);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.project-card-copy p {
+  color: var(--ink-muted);
+  font-size: var(--fs-small);
+  white-space: nowrap;
+}
+
+.projects-progress {
+  display: none;
+}
+
+.portfolio-disclaimer {
+  grid-column: 1 / -1;
+  padding-block: 1.5rem var(--section-y);
+  color: var(--ink-muted);
+  font-size: var(--fs-eyebrow);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card-action {
+    display: none;
+  }
+}
+
+/* Sem movimento, em telas largas: duas colunas, sem galeria fixa */
+@media (min-width: 901px) {
+  .projects-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 901px) and (prefers-reduced-motion: no-preference) {
+  .projects-pin {
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+    min-height: 34rem;
+    padding-top: calc(var(--header-h) + 1.4rem);
+    padding-bottom: clamp(1.2rem, 3vh, 2rem);
+    overflow: hidden;
+  }
+
+  .projects-head {
+    padding-bottom: clamp(1rem, 2.6vh, 2rem);
+  }
+
+  .projects-title {
+    font-size: clamp(2.4rem, 1rem + 3.6vw, 5rem);
+  }
+
+  .projects-list {
+    display: flex;
+    flex: 1;
+    gap: clamp(1rem, 2vw, 2rem);
+    align-items: stretch;
+    width: max-content;
+    min-height: 0;
+    will-change: transform;
+  }
+
+  .project-card {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    width: clamp(32rem, 54vw, 70rem);
+  }
+
+  .project-card-media {
+    flex: 1;
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+
+  .project-card-copy {
+    padding-top: 0.9rem;
+  }
+
+  .projects-progress {
+    position: relative;
+    display: block;
+    flex: none;
+    height: 2px;
+    margin: clamp(0.9rem, 2.4vh, 1.4rem) var(--page-x) 0;
+    background: var(--line);
+  }
+
+  .projects-progress-fill {
+    position: absolute;
+    inset: 0;
+    background: var(--moss);
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+
+  .portfolio-disclaimer {
+    padding-block: 1.2rem 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-title {
+    grid-column: 1 / -1;
+  }
+
+  .projects-count {
+    display: none;
+  }
+
+  .project-card-copy {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
