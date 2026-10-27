@@ -1,0 +1,104 @@
+/* Escritório: uma frase que se lê com a rolagem */
+
+.statement {
+  color: var(--ink);
+  background: var(--bone);
+}
+
+.statement-layout {
+  padding-top: var(--section-y);
+}
+
+.statement .eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+  color: var(--moss);
+}
+
+.statement-text {
+  grid-column: 1 / span 11;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 0.9rem + 3.9vw, 5.2rem);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  text-wrap: pretty;
+}
+
+.statement-text em {
+  font-style: normal;
+  color: var(--moss);
+}
+
+.statement-facts {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  margin-top: clamp(3.5rem, 7vw, 6rem);
+}
+
+.statement-fact {
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+}
+
+.statement-fact dt {
+  margin-bottom: 0.5rem;
+  color: var(--moss);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.statement-fact dd {
+  font-size: clamp(1.15rem, 1rem + 0.7vw, 1.55rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.statement-band {
+  position: relative;
+  grid-column: 1 / -1;
+  margin-top: clamp(4rem, 8vw, 7rem);
+}
+
+.statement-band-frame {
+  position: relative;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  background: var(--bone-deep);
+}
+
+.statement-band-frame picture,
+.statement-band-frame img {
+  width: 100%;
+  height: 100%;
+}
+
+.statement-band-frame img {
+  object-fit: cover;
+}
+
+.statement-band figcaption {
+  padding-top: 0.9rem;
+  color: var(--ink-muted);
+  font-size: var(--fs-small);
+}
+
+@media (max-width: 680px) {
+  .statement-text {
+    grid-column: 1 / -1;
+  }
+
+  .statement-facts {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .statement-band-frame {
+    aspect-ratio: 4 / 3;
+  }
+}
