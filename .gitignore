@@ -1,7 +1,18 @@
+# dependências e build
 node_modules
 dist
-.DS_Store
-*.local
-*.log
 .vite
 .wrangler/
+
+# ambiente e logs
+*.local
+*.log
+.env
+.env.*
+!.env.example
+
+# sistema e editores
+.DS_Store
+Thumbs.db
+.idea
+.vscode
