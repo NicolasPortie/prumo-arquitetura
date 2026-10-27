@@ -10,10 +10,10 @@ type Options = {
 };
 
 /**
- * Scroll-linked scrub. The video stays paused and never loops.
- * Seeking to `duration` wraps to frame 0 in some browsers, so we clamp to
- * the last paintable frame. The hold tail keeps that frame while Practice
- * is about to enter.
+ * Move o vídeo conforme a rolagem. Ele fica sempre pausado e não repete.
+ * Em alguns navegadores, buscar o tempo `duration` volta ao primeiro quadro,
+ * por isso o limite é o último quadro desenhável. O trecho final (`holdTail`)
+ * mantém esse quadro enquanto a seção do escritório entra.
  */
 export function useVideoScrub({
   videoRef,
@@ -83,7 +83,7 @@ export function useVideoScrub({
       try {
         await video.play();
       } catch {
-        /* autoplay lock: first user scroll still primes in most browsers */
+        /* autoplay bloqueado: na maioria dos navegadores a primeira rolagem libera */
       }
       video.pause();
       video.loop = false;

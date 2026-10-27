@@ -89,7 +89,7 @@ export function createHouse(THREE: Three, canvas: HTMLCanvasElement): House {
     return item;
   };
 
-  // ---- Luz: manhã fria que termina em entardecer quente ------------------
+  // ---- Luz: da manhã fria ao entardecer quente ---------------------------
   const hemi = new THREE.HemisphereLight(0xcfe0f2, 0x2a2824, 0.8);
   const sun = new THREE.DirectionalLight(0xdbe8ff, 2.9);
   sun.castShadow = true;
@@ -378,7 +378,7 @@ export function createHouse(THREE: Three, canvas: HTMLCanvasElement): House {
   resizeObserver.observe(canvas);
   resize();
 
-  // ---- Coreografia ---------------------------------------------------------
+  // ---- Animação ------------------------------------------------------------
   const choreograph = (tl: Timeline) => {
     const rise = (target: Grown | Grown[], at: number, duration = 0.12, stagger = 0, ease = "power3.out") =>
       tl.to(
@@ -418,7 +418,7 @@ export function createHouse(THREE: Three, canvas: HTMLCanvasElement): House {
     tl.to(trees.map((t) => t.scale), { x: 1, y: 1, z: 1, duration: 0.12, stagger: 0.02, ease: "back.out(1.7)" }, 0.74);
     tl.to(state, { dusk: 1, duration: 0.3, ease: "power1.inOut" }, 0.66).to(state, { lights: 1, duration: 0.14, ease: "power1.in" }, 0.8);
 
-    // A câmera acompanha as três etapas em um só movimento contínuo
+    // A câmera se move continuamente durante as três etapas
     tl.fromTo(
       state,
       { angle: -1.0, height: 8.2, dist: 18, look: 0.6 },

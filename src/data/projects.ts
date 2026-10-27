@@ -11,9 +11,8 @@ export type PortfolioProject = {
 };
 
 /**
- * Cases com visualização conceitual. Os campos ficam aqui para a equipe
- * trocar as imagens por fotos e dados verificados de cada obra
- * antes de qualquer uso comercial do portfólio.
+ * Projetos de demonstração, com imagens ilustrativas. Antes de usar o site
+ * de verdade, troque as imagens e os dados por fotos e informações das obras.
  */
 export const PORTFOLIO_PROJECTS: readonly PortfolioProject[] = [
   {
