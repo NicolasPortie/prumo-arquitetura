@@ -1,0 +1,222 @@
+/* Como trabalhamos: uma casa que se constrói com a rolagem */
+
+.method {
+  position: relative;
+  color: var(--bone);
+  background: var(--night);
+}
+
+.method-pin {
+  position: relative;
+  height: 100svh;
+  min-height: 36rem;
+  overflow: hidden;
+}
+
+.method-sky,
+.method-sky-dusk {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.method-sky {
+  background:
+    radial-gradient(ellipse at 62% 38%, oklch(0.3 0.045 245), transparent 62%),
+    linear-gradient(to bottom, oklch(0.17 0.03 251), oklch(0.12 0.022 251));
+}
+
+.method-sky-dusk {
+  opacity: 0;
+  visibility: hidden;
+  background:
+    radial-gradient(ellipse at 62% 96%, oklch(0.62 0.14 48 / 0.6), transparent 58%),
+    linear-gradient(to top, oklch(0.3 0.07 32 / 0.9), oklch(0.2 0.05 285 / 0.6) 70%, transparent);
+}
+
+.method-pin canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Véu atrás do texto, para ele ler bem sobre a cena */
+.method-pin::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(to right, oklch(0.1 0.02 251 / 0.72), transparent 46%),
+    linear-gradient(to top, oklch(0.1 0.02 251 / 0.55), transparent 38%);
+}
+
+.method-ui {
+  position: relative;
+  z-index: 2;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  padding-top: calc(var(--header-h) + 1.6rem);
+  padding-bottom: clamp(1.6rem, 4vh, 3rem);
+  pointer-events: none;
+}
+
+.method-title {
+  grid-column: 1 / span 7;
+  font-size: var(--fs-h3);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.method-title em {
+  font-style: normal;
+  color: var(--clay-light);
+}
+
+.method-copy {
+  position: relative;
+  grid-column: 1 / span 5;
+  align-self: end;
+  min-height: clamp(12rem, 30vh, 16rem);
+}
+
+.method-step {
+  position: absolute;
+  inset: auto 0 0;
+}
+
+.method-step-index {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--clay-light);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.method-step h3 {
+  font-size: clamp(2.6rem, 1rem + 4.6vw, 6rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+}
+
+.method-step p {
+  max-width: 28ch;
+  margin-top: 1.1rem;
+  color: var(--hero-muted);
+  font-size: var(--fs-lead);
+  line-height: 1.4;
+  text-wrap: pretty;
+}
+
+.method-progress {
+  position: absolute;
+  right: var(--page-x);
+  bottom: clamp(1.6rem, 4vh, 3rem);
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+  height: 7.5rem;
+}
+
+.method-progress-track {
+  position: relative;
+  width: 1px;
+  background: var(--line-light);
+}
+
+.method-progress-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--clay-light);
+  transform: scaleY(0);
+  transform-origin: top center;
+}
+
+.method-progress ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--hero-muted);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  font-variant-numeric: tabular-nums;
+}
+
+.method-progress li {
+  opacity: 0.5;
+  transition: opacity 400ms var(--ease-out), color 400ms var(--ease-out);
+}
+
+.method-progress li[data-active="true"] {
+  color: var(--clay-light);
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .method-title {
+    grid-column: 1 / -1;
+  }
+
+  .method-pin canvas {
+    height: 62%;
+    top: 14%;
+  }
+
+  .method-copy {
+    grid-column: 1 / -1;
+    min-height: 12rem;
+  }
+
+  .method-step h3 {
+    font-size: clamp(2.2rem, 1rem + 6vw, 3.4rem);
+  }
+
+  .method-progress {
+    display: none;
+  }
+}
+
+/* Sem movimento: a casa pronta e as três etapas em lista */
+.method[data-reduced="true"] .method-pin {
+  height: auto;
+  min-height: 0;
+}
+
+.method[data-reduced="true"] .method-pin canvas {
+  position: relative;
+  height: 60svh;
+  min-height: 22rem;
+}
+
+.method[data-reduced="true"] .method-sky,
+.method[data-reduced="true"] .method-sky-dusk {
+  opacity: 1;
+  visibility: visible;
+}
+
+.method[data-reduced="true"] .method-ui {
+  position: relative;
+  row-gap: 2.4rem;
+  height: auto;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.method[data-reduced="true"] .method-copy {
+  display: grid;
+  gap: 2rem;
+  grid-column: 1 / -1;
+  min-height: 0;
+}
+
+.method[data-reduced="true"] .method-step {
+  position: static;
+}
+
+.method[data-reduced="true"] .method-progress {
+  display: none;
+}
