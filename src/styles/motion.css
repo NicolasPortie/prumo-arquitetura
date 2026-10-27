@@ -1,0 +1,61 @@
+/*
+ * Estados iniciais das revelações. Só valem com JS e sem pedido de movimento
+ * reduzido; o GSAP leva cada elemento até o estado final (ver useScrollReveal).
+ */
+
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-reveal="fade"] {
+    opacity: 0;
+  }
+
+  .js [data-reveal="brise"] {
+    visibility: hidden;
+  }
+
+  .js [data-reveal="line"] {
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+
+  .js [data-reveal="split"],
+  .js [data-scrub-words] {
+    visibility: hidden;
+  }
+
+  .js [data-hero-fade],
+  .js .hero-title-line > span {
+    visibility: hidden;
+  }
+}
+
+/* Máscaras das linhas de títulos divididos pelo SplitText */
+.split-line-mask {
+  padding-block: 0.06em 0.14em;
+  margin-block: -0.06em -0.14em;
+}
+
+/* Lâminas da revelação em brise: da cor do fundo, com uma leve sombra de face */
+.brise {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  pointer-events: none;
+  perspective: 1400px;
+}
+
+.brise > span {
+  flex: 1 1 0;
+  height: 100%;
+  margin-right: -1px;
+  background: linear-gradient(90deg, var(--brise-face, var(--bone)) 70%, var(--brise-edge, var(--bone-deep)));
+  transform-origin: 0% 50%;
+  backface-visibility: hidden;
+}
+
+.method .brise > span,
+.contact .brise > span,
+.project-dialog .brise > span {
+  --brise-face: var(--night);
+  --brise-edge: var(--night-raised);
+}

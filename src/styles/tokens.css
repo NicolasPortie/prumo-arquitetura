@@ -1,0 +1,45 @@
+@import "@fontsource-variable/inter-tight/wght.css";
+
+:root {
+  /* Matéria: tons de papel, tinta, pedra escura e argila */
+  --bone: oklch(0.944 0.012 84);
+  --bone-raised: oklch(0.972 0.008 84);
+  --bone-deep: oklch(0.875 0.022 82);
+  --ink: oklch(0.174 0.023 251);
+  --ink-soft: oklch(0.335 0.027 251);
+  --ink-muted: oklch(0.45 0.023 251);
+  --night: oklch(0.125 0.022 251);
+  --night-raised: oklch(0.17 0.024 251);
+  --line: oklch(0.69 0.02 84 / 0.7);
+  --line-light: oklch(0.94 0.011 84 / 0.2);
+  --clay: oklch(0.665 0.102 62);
+  --clay-light: oklch(0.789 0.088 70);
+  --moss: oklch(0.42 0.069 151);
+  --hero-text: oklch(0.965 0.008 84);
+  --hero-muted: oklch(0.84 0.017 84);
+
+  /* Tipografia */
+  --font-display: "Inter Tight Variable", "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --font-ui: "Inter Tight Variable", "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --fs-eyebrow: 0.75rem;
+  --fs-small: 0.9rem;
+  --fs-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --fs-lead: clamp(1.15rem, 1rem + 0.7vw, 1.5rem);
+  --fs-h3: clamp(1.6rem, 1.2rem + 1.6vw, 2.6rem);
+  --fs-h2: clamp(2.6rem, 1.2rem + 5.4vw, 7rem);
+  --fs-display: clamp(3.2rem, 0.6rem + 8.4vw, 10.5rem);
+
+  /* Movimento */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --duration-press: 140ms;
+  --duration-ui: 240ms;
+
+  /* Layout */
+  --page-x: clamp(1.25rem, 4.2vw, 5rem);
+  --grid-gap: clamp(0.8rem, 1.55vw, 1.45rem);
+  --section-y: clamp(6rem, 12vw, 11rem);
+  --header-h: 4.5rem;
+
+  color-scheme: light;
+}
