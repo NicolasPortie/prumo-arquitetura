@@ -3,7 +3,20 @@
   "private": true,
   "version": "1.0.0",
   "description": "Site da Prumo Arquitetura: residências, reformas e interiores.",
+  "author": "Nicolas Portie",
+  "license": "UNLICENSED",
+  "homepage": "https://prumo.nicolasportie.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasPortie/prumo-arquitetura.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NicolasPortie/prumo-arquitetura/issues"
+  },
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
