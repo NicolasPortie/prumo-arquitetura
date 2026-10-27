@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      document.documentElement.classList.add("js");
+      // Antes do GSAP carregar: o ScrollTrigger devolve este valor ao navegador depois de medir.
+      if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    </script>
+    <title>Prumo Arquitetura | Projetos residenciais em São Paulo</title>
+    <meta
+      name="description"
+      content="Prumo Arquitetura: projetos residenciais, reformas e interiores em São Paulo, do briefing ao acompanhamento de obra."
+    />
+    <meta name="theme-color" content="#182337" />
+    <link rel="canonical" href="https://prumo.nicolasportie.com/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:site_name" content="Prumo Arquitetura" />
+    <meta property="og:title" content="Prumo Arquitetura | Projetos residenciais" />
+    <meta
+      property="og:description"
+      content="Residências, reformas e interiores em São Paulo, do briefing ao acompanhamento de obra."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://prumo.nicolasportie.com/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content="https://prumo.nicolasportie.com/media/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Residência de concreto, pedra e madeira aberta para um pátio arborizado"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Prumo Arquitetura | Projetos residenciais" />
+    <meta
+      name="twitter:description"
+      content="Residências, reformas e interiores em São Paulo, do briefing ao acompanhamento de obra."
+    />
+    <meta name="twitter:image" content="https://prumo.nicolasportie.com/media/og-image.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Prumo Arquitetura",
+        "url": "https://prumo.nicolasportie.com/",
+        "email": "ola@prumoarquitetura.com.br",
+        "description": "Escritório de arquitetura residencial, reformas e interiores em São Paulo.",
+        "areaServed": { "@type": "City", "name": "São Paulo" },
+        "knowsAbout": ["Arquitetura residencial", "Reformas", "Interiores"]
+      }
+    </script>
+
+    <link
+      rel="preload"
+      as="image"
+      href="/media/entre-planos-inicio.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
